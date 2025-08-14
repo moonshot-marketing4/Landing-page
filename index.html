@@ -1,219 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Page title</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-     html, body {
-           margin: 0;
-           padding: 0;
-           height: 100%;
-           overflow: hidden;
-        .nav-bar {
-            gap: 6px;
-            width: 98%;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 7px;
-            background-color:greenyellow;
-            margin: 0px;
-            border: 8px solid gold;
-             }
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap:7px
-            
-        }
-        nav a {
-        flex: 1;
-        font-size:12px;
-        white-space: nowrap;
-        color: white;
-        text-decoration: none;
-        font-size: 24px;
-        padding: 14px 20px;
-        border-radius: 30px;
-        margin: 40px 10px;
-        background-color: #555;
-        transition: background-color 0.3s;
-}
-.image-container {
-  position: relative;
-  width: 100%;
-  margin: auto;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonshot Marketing</title>
 
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  <!-- ✅ Font Awesome Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-.image-container button {
-  position: absolute;
-  bottom: 39%;
-  left: 10px;
-  background-color: #ff004f;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-size: 38px;
-  cursor: pointer;
-  border-radius: 12px;
-}
+  <style>
+    body { margin:0; font-family: 'Segoe UI', sans-serif; line-height:1.6; background:#f9fafb; }
+    header { background: linear-gradient(90deg, #007bff, #00d4ff); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index:1000; animation: slideDown 1s ease forwards; }
+    header .logo { font-size: 1.5rem; font-weight: bold; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
 
-.image-container button:hover {
-  background-color: #e60046;
-}
-.text-overlay {
-  position: absolute;
-  bottom:60%;
-  left:170px;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  
-}
-.text-overlay strong {
-  font-size:14px;
-  display: block;
-  
-}
+    .hero { display: flex; flex-wrap: wrap; align-items: center; padding: 3rem 2rem; background: linear-gradient(to right, #007bff, #00d4ff); color: white; text-align: center; animation: fadeIn 1.5s ease-in-out; }
+    .hero-text { flex: 1; min-width: 300px; }
+    .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; animation: slideUp 1.5s ease forwards; }
+    .hero-text p { font-size: 1.2rem; margin-bottom: 1.5rem; animation: fadeIn 2s ease-in-out; }
+    .hero-text button { padding: 0.8rem 1.8rem; background: white; color: #007bff; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; transition: background 0.3s, transform 0.3s; animation: bounceIn 1.8s ease; }
+    .hero-text button:hover { background: #e0e0e0; transform: scale(1.05); }
 
-.text-overlay span {
-  font-size: 30px;
-}
-.text-overlay .highlight {
-  color: red;
-  font-size:46px;}
-  body {
-    background: url('your-background.jpg') no-repeat center center/cover;
-    font-family: Arial, sans-serif;
-}
+    .services { padding: 3rem 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; background: #fff; }
+    .service { background: #f0f8ff; padding: 2rem; border-radius: 12px; flex: 1; min-width: 250px; max-width: 300px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; opacity: 0; animation: fadeInUp 1s forwards; }
+    .service:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .service:nth-child(1) { animation-delay: 0.3s; }
+    .service:nth-child(2) { animation-delay: 0.6s; }
+    .service:nth-child(3) { animation-delay: 0.9s; }
+    .service h3 { color: #007bff; margin-bottom: 1rem; }
 
-.car-search-box {
-    background: rgba(0, 0, 0, 0.6); /* transparent black */
-    padding: 20px 30px;
-    max-width: 300px;
-    border-radius: 8px;
-    color: white;
-        position:absolute;
-        left: 190%;
-        top: 20px;
-        width: 300px;
-}
+    .contact { padding: 3rem 2rem; background: linear-gradient(90deg, #007bff, #00d4ff); color: white; text-align: center; animation: fadeIn 2s ease-in-out; }
+    .contact form { display: flex; flex-direction: column; max-width: 400px; margin: auto; }
+    .contact input, .contact textarea { margin-bottom: 1rem; padding: 0.8rem; border: none; border-radius: 8px; }
+    .contact button { padding: 0.8rem; background: white; color: #007bff; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; transition: background 0.3s, transform 0.3s; }
+    .contact button:hover { background: #e0e0e0; transform: scale(1.05); }
 
-.car-search-box h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
+    .social-icons { margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; }
+    .social-icons a { color: white; font-size: 1.8rem; transition: transform 0.3s, color 0.3s; animation: fadeInUp 1s forwards; }
+    .social-icons a:hover { transform: scale(1.2); color: #E1306C; } /* Instagram Pink */
 
-.car-search-box h2 span {
-    color: #ff004f; /* pink text for 'Choosing' */
-}
+    footer { background: #111; color: white; text-align: center; padding: 1rem; font-size: 0.9rem; }
 
-.car-search-box select {
+    @media (max-width: 768px) {
+      .hero { text-align: center; }
+      .services { flex-direction: column; align-items: center; }
+    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes fadeInUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
+    @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    form {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #666;
-    border-radius: 4px;
-    background: transparent;
-    color: white;
+    max-width: 500px;
+    margin: 0 auto; /* center horizontally */
 }
-
-.car-search-box select option {
-    color: black; /* dropdown options color */
-}
-
-.car-search-box .row {
-    display: flex;
-    gap: 10px;
-}
-.car-search-box button{
-    background-color: #ff004f;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 12px 0;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    position: relative;
-    top: 15px;
-    
-}
-.p1{
-    background-color: yellow;
-    width: 100px;
-    height: 200px;
-    position: absolute;
-}
-
-    </style>
+  </style>
 </head>
 <body>
-   <nav class="nav-bar">
-       <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-       </ul>
-   </nav> 
-   </div>
-   <div class="image-container">
-  <img src="genesis-new-york-hyundai-concept-cars-4k-wallpaper-preview.jpg" alt="Car Image">
-  <button>Shop Now</button>
-  <div class="text-overlay">
-  <strong>We bring them top deal</strong>
-  <br> <span>Find <span class="highlight">Great</span> Auto Part<br>Deals For Your Car</span>
-  <div class="car-search-box">
-    <h2>Get Started By <span>Choosing</span> Your Car</h2>
+  <header>
+    
+    <div class="logo">Moonshot Marketing</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <select>
-        <option>Cars brands</option>
-        <option>BMW</option>
-        <option>Honda</option>
-        <option>Toyota</option>
-        <option>Kia</option>
-        
-    </select>
-
-    <div class="row">
-        <select>
-            <option>Year</option>
-            <option>2020</option>
-            <option>2021</option>
-            <option>2022</option>
-            <option>2023</option>
-            <option>2024</option>
-            <option>2025</option>
-        </select>
-        <select>
-            <option>Model</option>
-        </select>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Boost Your Brand Growth</h1>
+      <p>We craft data-driven marketing strategies that capture attention and drive results.</p>
+      <button>Get Started</button>
     </div>
+  </section>
 
-    <select>
-        <option>Part Type</option>
-    </select>
+  <section id="services" class="services">
+    <div class="service">
+      <h3>Social Media Marketing</h3>
+      <p>Engage and grow your audience with powerful campaigns.</p>
+    </div>
+    <div class="service">
+      <h3>SEO Optimization</h3>
+      <p>Rank higher and attract organic traffic effortlessly.</p>
+    </div>
+    <div class="service">
+      <h3>Paid Ads</h3>
+      <p>Target the right customers and maximize ROI.</p>
+    </div>
+  </section>
 
-    <select>
-        <option>Engine</option>
-    </select>
-    <button>Search</button>
-</div>
-</div>
-     <div>
-         <p class="p1">consectetuer eirmod possim eos tale dico iriure dolorum nam mei dictumst nonumy imperdiet voluptatibus </p>
-     </div>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+    <action="https://formsubmit.co/el/godosi" method="POST">   
+            
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+        <p id="formMessage" style="margin-top:10px; color:green; display:none;">
+        ✅ Your message has been sent successfully!
+      </p>
+    </form>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://instagram.com/moonshot_marketing1" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Moonshot Marketing. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
