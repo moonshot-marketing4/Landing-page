@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     html, body {
+           margin: 0;
+           padding: 0;
+           height: 100%;
+           overflow: hidden;
+        .nav-bar {
+            gap: 6px;
+            width: 98%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 7px;
+            background-color:greenyellow;
+            margin: 0px;
+            border: 8px solid gold;
+             }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap:7px
+            
+        }
+        nav a {
+        flex: 1;
+        font-size:12px;
+        white-space: nowrap;
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 14px 20px;
+        border-radius: 30px;
+        margin: 40px 10px;
+        background-color: #555;
+        transition: background-color 0.3s;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-container button {
+  position: absolute;
+  bottom: 39%;
+  left: 10px;
+  background-color: #ff004f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 38px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.image-container button:hover {
+  background-color: #e60046;
+}
+.text-overlay {
+  position: absolute;
+  bottom:60%;
+  left:170px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  
+}
+.text-overlay strong {
+  font-size:14px;
+  display: block;
+  
+}
+
+.text-overlay span {
+  font-size: 30px;
+}
+.text-overlay .highlight {
+  color: red;
+  font-size:46px;}
+  body {
+    background: url('your-background.jpg') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+}
+
+.car-search-box {
+    background: rgba(0, 0, 0, 0.6); /* transparent black */
+    padding: 20px 30px;
+    max-width: 300px;
+    border-radius: 8px;
+    color: white;
+        position:absolute;
+        left: 190%;
+        top: 20px;
+        width: 300px;
+}
+
+.car-search-box h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.car-search-box h2 span {
+    color: #ff004f; /* pink text for 'Choosing' */
+}
+
+.car-search-box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+}
+
+.car-search-box select option {
+    color: black; /* dropdown options color */
+}
+
+.car-search-box .row {
+    display: flex;
+    gap: 10px;
+}
+.car-search-box button{
+    background-color: #ff004f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    position: relative;
+    top: 15px;
+    
+}
+.p1{
+    background-color: yellow;
+    width: 100px;
+    height: 200px;
+    position: absolute;
+}
+
+    </style>
+</head>
+<body>
+   <nav class="nav-bar">
+       <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+       </ul>
+   </nav> 
+   </div>
+   <div class="image-container">
+  <img src="genesis-new-york-hyundai-concept-cars-4k-wallpaper-preview.jpg" alt="Car Image">
+  <button>Shop Now</button>
+  <div class="text-overlay">
+  <strong>We bring them top deal</strong>
+  <br> <span>Find <span class="highlight">Great</span> Auto Part<br>Deals For Your Car</span>
+  <div class="car-search-box">
+    <h2>Get Started By <span>Choosing</span> Your Car</h2>
+
+    <select>
+        <option>Cars brands</option>
+        <option>BMW</option>
+        <option>Honda</option>
+        <option>Toyota</option>
+        <option>Kia</option>
+        
+    </select>
+
+    <div class="row">
+        <select>
+            <option>Year</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+        </select>
+        <select>
+            <option>Model</option>
+        </select>
+    </div>
+
+    <select>
+        <option>Part Type</option>
+    </select>
+
+    <select>
+        <option>Engine</option>
+    </select>
+    <button>Search</button>
+</div>
+</div>
+     <div>
+         <p class="p1">consectetuer eirmod possim eos tale dico iriure dolorum nam mei dictumst nonumy imperdiet voluptatibus </p>
+     </div>
+</body>
+</html>
