@@ -94,16 +94,15 @@
 
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <form>
-    <action="https://formsubmit.co/el/godosi" method="POST">   
+      <form action="https://api.web3forms.com/submit" method="POST"> 
+<input type="hidden" name="access_key" value="264641e5-c1a7-4d33-a56b-af42418fd425">
+
             
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <input type="name" name="name" placeholder="Your Name" required>
+      <input type="email" name="email"placeholder="Your Email" required>
+      <textarea name="text"placeholder="Your Message" rows="4" required></textarea>
+     <input type="hidden" name="redirect" value="https://web3forms.com/success">
       <button type="submit">Send Message</button>
-        <p id="formMessage" style="margin-top:10px; color:green; display:none;">
-        ✅ Your message has been sent successfully!
-      </p>
     </form>
   </section>
 
